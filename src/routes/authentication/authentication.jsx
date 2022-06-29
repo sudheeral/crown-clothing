@@ -1,16 +1,14 @@
 // import { userEffect } from "react";
 // import { getRedirectResult } from "firebase/auth";
 import SignUp from "../../components/sign-up/sign-up";
+import SignIn from "../../components/sign-in/sign-in";
 
-import {
-  signInWithGooglePopup,
-  // signInWithGoogleRedirect,
-  createUserDocumentFromAuth,
-} from "../../utils/firebase";
+import // signInWithGoogleRedirect,
+"../../utils/firebase";
 
-import "./sign-in.scss";
+import "./authentication.scss";
 
-const SignIn = () => {
+const Authentication = () => {
   // userEffect(async () => {
   //   const response = await getRedirectResult();
 
@@ -19,22 +17,16 @@ const SignIn = () => {
   //   }
   // }, []);
 
-  const logGooglePopupUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    console.log(user);
-    const userDocRef = createUserDocumentFromAuth(user);
-  };
-
   return (
-    <div>
-      <h1>Sign-in</h1>
-      <button onClick={logGooglePopupUser}>Signin with Google Popup</button>
+    <div className="authentication-container">
+      {/* <button onClick={logGooglePopupUser}>Signin with Google Popup</button> */}
       {/* <button onClick={signInWithGoogleRedirect}>
         Signin with Google Redirect
       </button> */}
+      <SignIn />
       <SignUp />
     </div>
   );
 };
 
-export default SignIn;
+export default Authentication;
