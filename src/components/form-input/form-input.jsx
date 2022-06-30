@@ -1,8 +1,8 @@
 import "./form-input.scss";
 
 const FormInput = ({ label, ...otherProps }) => {
-  console.log("label", label);
-  console.log("inputProps", otherProps);
+  // console.log("label", label);
+  // console.log("inputProps", otherProps);
 
   return (
     <div className="group">
