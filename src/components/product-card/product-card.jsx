@@ -8,12 +8,12 @@ const ProductCard = ({ product }) => {
   const { addItem2Cart } = useContext(CartContext);
 
   const addProduct2Cart = () => {
-    console.log("addProduct2Cart", product);
+    // console.log("addProduct2Cart", product);
     addItem2Cart(product);
   };
 
   const { name, price, imageUrl } = product;
-  console.log("products", product);
+  // console.log("products", product);
 
   return (
     <div className="product-card-container">
